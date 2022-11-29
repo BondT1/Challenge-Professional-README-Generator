@@ -87,9 +87,33 @@ const questions = [
         type: 'choices',
         name: 'license',
         message: 'Which license would you like to use for your project?',
-    
-
-    }
+        choices: ['MIT', 'Apache', 'no license']
+    },
+    {
+        type: 'input', 
+        name: 'contributors',
+        message: 'If you would like to allow contributions to your project please provide contributing guidelines. (if not, type N/A)',
+        validate: contributors => {
+            if (contributors) {
+                return true;
+            } else {
+                console.log('Please enter contributor guidelines or N/A if you do not want to allow contributors');
+            }
+        }
+    }, 
+    {
+        type: 'input', 
+        name: 'test', 
+        message: 'How can your project be tested? Provide instructions on how to run these tests',
+        validate: test => {
+            if (test) {
+                return true;
+            } else {
+                console.log('Please provide some project test instructions');
+            }
+        }
+    },
+    {}
 ];
 
 // TODO: Create a function to write README file
