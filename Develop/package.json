@@ -8,9 +8,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "8.2.4"
+    "fs": "^0.0.1-security",
+    "inquirer": "^8.2.4"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BondT1/Challenge-Professional-README-Generator.git"
