@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Markdown = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -20,7 +21,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'what is project',
+        name: 'whatProject',
         message: 'What is your project?',
         validate: projectWhat => {
             if (projectWhat) {
@@ -33,7 +34,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'project purpose',
+        name: 'projectPurpose',
         message: 'What is the purpose of your project?',
         validate: purpose => {
             if (purpose) {
@@ -46,7 +47,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'project features',
+        name: 'projectFeatures',
         message: 'What features did you use to create your project? (e.g coding language/features)',
         validate: features => {
             if (features) {
@@ -87,7 +88,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Which license would you like to use for your project?',
-        choices: ['MIT', 'Apache', 'no license']
+        choices: ['MIT', 'Apache', 'do not use license']
     },
     {
         type: 'confirm',
@@ -116,7 +117,7 @@ const questions = [
     }, 
     {
         type: 'input', 
-        name: 'test', 
+        name: 'tests', 
         message: 'How can your project be tested? Provide instructions on how to run these tests.',
         validate: test => {
             if (test) {
@@ -156,9 +157,8 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile() {
-    let data = "This is a test"
-    fs.writeFile("./generated/README.md", data, err => {
+function writeToFile(data) {
+    fs.writeFile(`./generated/README.md`, data, err => {
         if (err) {
             throw err
         };
@@ -169,11 +169,18 @@ function writeToFile() {
 // TODO: Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
+    .then(rmData => {
+        return rmData;
+    })
 }
 
 // Function call to initialize app
 init()
+ .then(rmData => {
+    return generateMarkdown(rmData);
+ })
  .then(createReadme => writeToFile(createReadme))
+
  .catch(err => {
     console.log(err);
  });
