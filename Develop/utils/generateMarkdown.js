@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== 'no license') {
-    return // badge url
+    return `(https://img.shields.io/badge/license-${license}-blue)`
   } else {
     return '';
   }
@@ -13,9 +13,7 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   if (license !== 'do not use license') {
     return`
-    [${license}]` // license link 
-
-    
+    [${license}] - (https://choosealicense.com/licenses/${license})`
   } else {
     return '';
   }
@@ -28,9 +26,27 @@ function renderLicenseSection(license) {
     return `
   ## [license]
 
-  The license used for this project is ${renderLicenseLink(license)}`;
+  The license covering this project is ${renderLicenseLink(license)}`;
   } else {
     return '';
+  }
+}
+
+// Adds license to 
+function TOCLicense(license) {
+  if (license !== 'do not use license') {
+    return `
+    * [license](#license)`;
+  } else {
+    return '';
+  }
+}
+
+function contributorsSec(contConfirm, data) {
+  if (!contConfirm) {
+    return ''
+  } else {
+    return `${data}`;
   }
 }
 
@@ -45,7 +61,7 @@ function generateMarkdown(data) {
   * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
-  // license
+${TOCLicense(data.license)}
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
@@ -70,7 +86,7 @@ function generateMarkdown(data) {
   
   ## [Contributing]
   
-  // needs work
+  ${contributorsSec(data.contConfirm, data.contributors)}
  
   ## [Tests]
 
