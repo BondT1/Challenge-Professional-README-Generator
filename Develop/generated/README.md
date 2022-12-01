@@ -1,7 +1,7 @@
 # s
 
-  
-    ![badge](https://img.shields.io/badge/license-mit-blue)
+
+  ![badge](https://img.shields.io/badge/license-mit-blue)
     
   
  

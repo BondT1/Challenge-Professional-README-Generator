@@ -3,8 +3,8 @@
 function renderLicenseBadge(license) {
   if (license !== 'no license') {
     return `
-    ![badge](https://img.shields.io/badge/license-${license}-blue)
-    `
+  ![badge](https://img.shields.io/badge/license-${license}-blue)
+    `;
   } else {
     return '';
   }
@@ -56,7 +56,7 @@ function contributorsSec(contConfirm, data) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseBadge(data.license)}
+${renderLicenseBadge(data.license)}
   
  
   ## Table-of-Contents
