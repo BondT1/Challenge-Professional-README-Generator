@@ -4,6 +4,8 @@
 
 This challenge was to create a professional README generator using node. The README will contain a project title, description, table of contents, installation instructions, usage instructions, a license, contributor guidelines, test instructions, and contact details. Once the user has answered the questions in the command line, a README will be created in the generated folder including the user inputs. 
 
+The purpose of this project was to find an quick and easy way to create a detailed README file for your projects. 
+
 The features used within this project are:
 
 - Node
@@ -27,7 +29,11 @@ Run the code 'node index.js' in your command line once you are within the correc
 
 Use the instructional video below for help. 
 
-A screenshot of a completed README in shown below.
+https://drive.google.com/file/d/1H_u-7Es6wb1j76Fmge-1KeprWCxVnHi7/view
+
+A screenshot of the generated README in the video is shown below.
+
+![screenshot of generated README file](Develop/Images/Screencapture%20of%20README.png)
 
 ## Credits
 
