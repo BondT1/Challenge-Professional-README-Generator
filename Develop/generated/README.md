@@ -1,6 +1,7 @@
-# README Generator
+# s
 
-  (https://img.shields.io/badge/license-mit-blue)
+  
+    ![badge](https://img.shields.io/badge/license-mit-blue)
   
  
   ## Table-of-Contents
@@ -8,46 +9,46 @@
   * [Installation](#installation)
   * [Usage](#usage)
 
-    * License(#license)
+  * [License](#license)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
   
   ## Description
 
-  a README generator
+  s
 
-  to generate README
+  s
 
-  The feature used in this project are inquirer, node.js, Javascript, and npm 
+  s
  
   ## Installation
 
-  To install just type install npm into command line
+  s
  
   ## Usage
 
-  to use type node index.js into command line and answer questions 
+  s
 
   
-  ## [license]
+  ## license
 
   The license covering this project is 
     [mit] - (https://choosealicense.com/licenses/mit)
   
   ## Contributing
   
-  feel free tpo contribut einany way you would like
+  
  
   ## Tests
 
-  ts the project by typing node index.js test into comman line
+  s
  
   ## Questions
 
   Contact links:
 
-  Github - (https://github.com/BON_T)
+  Github - (https://github.com/s)
 
-  Email - tombond@yahoo.com
+  Email - s
 
