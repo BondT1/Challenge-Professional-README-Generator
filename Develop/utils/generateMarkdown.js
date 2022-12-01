@@ -24,7 +24,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   if (license !== 'do not use license') {
     return `
-  ## [license]
+  ## license
 
   The license covering this project is ${renderLicenseLink(license)}`;
   } else {
@@ -36,7 +36,7 @@ function renderLicenseSection(license) {
 function TOCLicense(license) {
   if (license !== 'do not use license') {
     return `
-    * [license](#license)`;
+  * [License](#license)`;
   } else {
     return '';
   }
@@ -66,7 +66,7 @@ ${TOCLicense(data.license)}
   * [Tests](#tests)
   * [Questions](#questions)
   
-  ## [Description]
+  ## Description
 
   ${data.whatProject}
 
@@ -74,25 +74,25 @@ ${TOCLicense(data.license)}
 
   ${data.projectFeatures}
  
-  ## [Installation]
+  ## Installation
 
   ${data.installation}
  
-  ## [Usage]
+  ## Usage
 
   ${data.usage}
 
   ${renderLicenseSection(data.license)}
   
-  ## [Contributing]
+  ## Contributing
   
   ${contributorsSec(data.contConfirm, data.contributors)}
  
-  ## [Tests]
+  ## Tests
 
   ${data.tests}
  
-  ## [Questions]
+  ## Questions
 
   Contact links:
 
