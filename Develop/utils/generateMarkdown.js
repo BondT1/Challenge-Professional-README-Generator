@@ -1,5 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// A function that returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (license !== 'no license') {
     return `
@@ -10,8 +9,7 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// A function that returns the license link
 function renderLicenseLink(license) {
   if (license !== 'do not use license') {
     return`
@@ -21,8 +19,7 @@ function renderLicenseLink(license) {
   }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// A function that returns the license section of README
 function renderLicenseSection(license) {
   if (license !== 'do not use license') {
     return `
@@ -34,7 +31,7 @@ function renderLicenseSection(license) {
   }
 }
 
-// Adds license to 
+// Adds license to the table of contents if the user wants to use one 
 function TOCLicense(license) {
   if (license !== 'do not use license') {
     return `
@@ -44,6 +41,7 @@ function TOCLicense(license) {
   }
 }
 
+// Adds the contributor section if the user chooses to allow contributors
 function contributorsSec(contConfirm, data) {
   if (!contConfirm) {
     return ''
@@ -52,7 +50,7 @@ function contributorsSec(contConfirm, data) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// A function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
